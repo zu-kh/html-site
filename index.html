@@ -3,35 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة الحب</title>
+    <title>عام جديد سعيد</title>
     <style>
-		
+		@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
         body {
             margin: 0;
             overflow: hidden;
-            background: #ffeef2; /* Light pink background */
-            font-family: Arial, sans-serif;
+            background: #fff0f5; /* Lavender Blush */
+            font-family: 'Great Vibes', cursive;
             text-align: center;
-            color: #333;
+            color: #c71585; /* Medium Violet Red */
             position: relative;
         }
 		
 		.glow {
-            text-shadow: 0 0 10px rgba(255, 99, 143, 0.8), 0 0 20px rgba(255, 99, 143, 0.8);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);
         }
 
 
-        .header {
-            padding: 20px;
-            background: #ff6f91; /* Soft pink */
-            color: white;
-            font-size: 2em;
-            border-bottom: 5px solid #ff3f7f; /* Darker pink */
-        }
+
 
         .content {
             padding: 50px 20px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 15px;
             max-width: 600px;
             margin: 20px auto;
@@ -40,11 +34,11 @@
 
         .content h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 4em;
         }
 
         .content p {
-            font-size: 1.2em;
+            font-size: 2em;
             line-height: 1.6;
         }
 
@@ -52,7 +46,7 @@
             position: absolute;
             width: 100px;
             height: 100px;
-			opacity: 0.9;
+			opacity: 1;
         }
 
         .butterfly-wrapper .leftwings,
@@ -61,7 +55,7 @@
             width: 50%;
             height: 100%;
             top: 0;
-			opacity: 0.9;
+			opacity: 1;
         }
 
         .butterfly-wrapper .leftwings {
@@ -82,7 +76,7 @@
 
         .butterfly-wrapper .upperwing,
         .butterfly-wrapper .lowerwing {
-            background: radial-gradient(ellipse at center, #ff6f91 0%, #ffb3b3 50%, #ff6f91 100%);
+            background: radial-gradient(ellipse at center, #ff0000 0%, #ffb3b3 50%, #ff0000 100%);
             animation-duration: 0.3s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -150,30 +144,32 @@
         }
 
         @keyframes flutter {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(calc(100vw - 100px), calc(50vh - 100px)) rotate(90deg); }
-            50% { transform: translate(calc(50vw - 100px), calc(100vh - 100px)) rotate(180deg); }
-            75% { transform: translate(calc(0vw - 100px), calc(50vh - 100px)) rotate(270deg); }
-            100% { transform: translate(0, 0) rotate(360deg); }
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(100vw, 100vh) rotate(360deg);
+            }
         }
 
-        .butterfly1 { animation: flutter 10s infinite; }
-        .butterfly2 { animation: flutter 12s infinite; }
-        .butterfly3 { animation: flutter 14s infinite; }
-        .butterfly4 { animation: flutter 16s infinite; }
+        .butterfly1 { animation: flutter 20s cubic-bezier(0.42, 0, 0.58, 1) -5s infinite; }
+        .butterfly2 { animation: flutter 25s cubic-bezier(0.42, 0, 0.58, 1) -10s infinite; }
+        .butterfly3 { animation: flutter 30s cubic-bezier(0.42, 0, 0.58, 1) -15s infinite; }
+        .butterfly4 { animation: flutter 35s cubic-bezier(0.42, 0, 0.58, 1) -20s infinite; }
+        .butterfly5 { animation: flutter 40s cubic-bezier(0.42, 0, 0.58, 1) -25s infinite; }
+        .butterfly6 { animation: flutter 45s cubic-bezier(0.42, 0, 0.58, 1) -30s infinite; }
+        .butterfly7 { animation: flutter 50s cubic-bezier(0.42, 0, 0.58, 1) -35s infinite; }
+        .butterfly8 { animation: flutter 55s cubic-bezier(0.42, 0, 0.58, 1) -40s infinite; }
 	
         .heart {
             position: absolute;
-            color: red;
+            color: #c71585; /* Medium Violet Red */
             font-size: 10px; /* Minimum size */
-            opacity: 0.8; /* Start invisible */
-            transition: opacity 1s ease-in, transform 1s ease-in; /* Transition for fade-in and movement */
         }
     
     </style>
 </head>
 <body>
-    <!-- Glowing Header -->
 	<div class="butterfly-wrapper butterfly1">
         <div class="leftwings">
             <div class="perspective">
@@ -246,40 +242,108 @@
             </div>
         </div>
     </div>
+    <div class="butterfly-wrapper butterfly5">
+        <div class="leftwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_left"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_left"></div>
+            </div>
+        </div>
+        <div class="rightwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_right"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="butterfly-wrapper butterfly6">
+        <div class="leftwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_left"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_left"></div>
+            </div>
+        </div>
+        <div class="rightwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_right"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="butterfly-wrapper butterfly7">
+        <div class="leftwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_left"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_left"></div>
+            </div>
+        </div>
+        <div class="rightwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_right"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="butterfly-wrapper butterfly8">
+        <div class="leftwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_left"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_left"></div>
+            </div>
+        </div>
+        <div class="rightwings">
+            <div class="perspective">
+                <div class="upperwing upperwing_right"></div>
+            </div>
+            <div class="perspective">
+                <div class="lowerwing lowerwing_right"></div>
+            </div>
+        </div>
+    </div>
     <div class="content">
-        <h1 class="glow">معًا في كل الظروف</h1>
+        <!-- The Arabic text means: "Happy new year, my love of my life. With the beginning of a new year, I want to tell you that you are the most beautiful gift in my life. Every day with you is a celebration, and every moment by your side is a blessing. I wish us a new year full of love, happiness, and unforgettable adventures. Happy new year my love." -->
+        <h1 class="glow">عام جديد سعيد، يا حب حياتي</h1>
         <p class="glow">
-            أحبك ليس فقط لما أنت عليه، ولكن لكل ما أستطيع أن أكونه عندما أكون معك. في كل لحظة من حياتنا، نحن معًا، سواء كانت الأوقات جميلة أو مليئة بالتحديات
-            <br><br>
-            عندما نكون معًا، تضيء الدنيا من حولنا. كل ابتسامة منك تجعل قلبي يدق أسرع، وكل ضحكة لك هي موسيقى تعزف في أذني. لنحتفل بكل لحظة جميلة نعيشها، فكل لحظة تحمل في طياتها وعدًا جديدًا بحب أكبر وأعمق.
-			<br><br>
-			لكن الحياة ليست دائمًا سهلة. هناك لحظات من الحزن والقلق. ولكنني أعدك، مهما كانت الظروف، سأكون دائمًا بجانبك. سنواجه كل تحدٍ معًا، ونتخطى كل صعوبة بقوة حبنا. لنذهب إلى كل مصاعبنا معًا، يدًا بيد، قلبًا بقلب.
-			<br><br>
-			كل تحدٍ هو فرصة للنمو. سنبني أحلامنا معًا، وسنصنع ذكريات جديدة. في الأوقات الصعبة، سأتذكر دائمًا أننا معًا، وأن حبنا هو النور الذي يرشدنا في الظلام. سأكون دائمًا هنا لتشجيعك، ودعمك، ولأخبرك أن كل شيء سيكون على ما يرام.
-			<br><br>
-			دعنا نواصل هذا الطريق معًا، لنصنع قصة حب لا تُنسى. لنواجه العالم بشجاعة، ولنجعل من كل لحظة معًا كنزًا. مهما كانت الظروف، نحن معًا، وأنا ممتن لكل لحظة نقضيها معًا.
+            مع بداية عام جديد، أريد أن أقول لكِ أنكِ أجمل هدية في حياتي. كل يوم معكِ هو عيد، وكل لحظة بجانبكِ هي نعمة. أتمنى لنا سنة جديدة مليئة بالحب والسعادة والمغامرات التي لا تُنسى. كل عام وأنتِ حبيبتي.
 			</p>
     </div>
     
     
 <script>
-// <![CDATA[
-var colours = ['#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c']; // colors of the hearts
-var minisize = 10; // smallest size of hearts in pixels
-var maxisize = 20; // biggest size of hearts in pixels
-var hearts = 100; // maximum number of hearts on screen
+var colours = ['#ff0000', '#ff4d4d', '#ff6666', '#ff7f7f', '#ff9999', '#ffb3b3', '#ffcccc']; // colors of the hearts
+var minisize = 5; // smallest size of hearts in pixels
+var maxisize = 30; // biggest size of hearts in pixels
+var hearts = 200; // maximum number of hearts on screen
 var over_or_under = "over"; // set to "over" for hearts to always be on top
 
 var swide = window.innerWidth;
 var shigh = window.innerHeight;
-var herz = new Array();
-var herzx = new Array();
-var herzy = new Array();
-var herzs = new Array();
+var herz = [];
+var herzx = [];
+var herzy = [];
+
+window.onresize = function() {
+    swide = window.innerWidth;
+    shigh = window.innerHeight;
+}
 
 window.onload = function() {
     for (var i = 0; i < hearts; i++) {
-        var heart = createDiv("auto", "auto");
+        var heart = createHeart("auto", "auto");
         heart.className = "heart"; // Add class for styling
         heart.style.zIndex = (over_or_under == "over") ? "1001" : "0";
         heart.style.color = colours[i % colours.length];
@@ -292,15 +356,14 @@ window.onload = function() {
         // Position hearts randomly and make them appear
         positionHeart(i);
     }
-    setInterval(animateHearts, 30);
+    setInterval(animateHearts, 50);
 }
 
 function positionHeart(i) {
     herz[i].style.left = Math.random() * (swide - minisize) + "px";
     herz[i].style.top = Math.random() * (shigh - minisize) + "px";
-    herz[i].style.fontSize = minisize + "px";
+    herz[i].style.fontSize = Math.random() * (maxisize - minisize) + minisize + "px";
     herz[i].style.visibility = "visible";
-    herz[i].style.opacity = 1; // Fade in effect
     herzy[i] = true;
 
     // Set initial random movement direction
@@ -311,12 +374,13 @@ function positionHeart(i) {
 function animateHearts() {
     for (var i = 0; i < hearts; i++) {
         if (herzy[i]) {
-            blow_me_a_kiss(i);
+            animateHeart(i);
         }
     }
 }
 
-function blow_me_a_kiss(i) {
+function animateHeart(i) {
+    // This function animates a heart element
     // Update position with smooth movement
     var left = parseFloat(herz[i].style.left);
     var top = parseFloat(herz[i].style.top);
@@ -331,21 +395,24 @@ function blow_me_a_kiss(i) {
     if (top < 0 || top > shigh) {
         herzy[i] *= -1; // Reverse direction
     }
+    if (Math.random() > 0.95) {
+        herzx[i] = Math.random() * 2 - 1;
+        herzy[i] = Math.random() * 2 - 1;
+    }
 
     herz[i].style.left = left + "px"; // Update left position
     herz[i].style.top = top + "px";   // Update top position
 }
 
-function createDiv(height, width) {
-    var div = document.createElement("div");
-    div.style.position = "absolute";
-    div.style.height = height;
-    div.style.width = width;
-    div.style.overflow = "hidden";
-    div.style.backgroundColor = "transparent";
-    return div;
-}
-// ]]>
+function createHeart(height, width) {
+    // This function creates a heart element
+    var span = document.createElement("span");
+    span.style.position = "absolute";
+    span.style.height = height;
+    span.style.width = width;
+    span.style.overflow = "hidden";
+    span.style.backgroundColor = "transparent";
+    return span;
 </script>
 
 
