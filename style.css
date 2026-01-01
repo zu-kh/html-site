@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+body {
+    margin: 0;
+    overflow-y: auto;
+    background: linear-gradient(to top, #fff0f5, #fde6e8);
+    font-family: 'Noto Naskh Arabic', serif;
+    text-align: center;
+    color: #8d3a66; 
+    position: relative;
+}
+
+.glow {
+    text-shadow: 0 0 8px rgba(224, 176, 255, 0.8), 0 0 15px rgba(224, 176, 255, 0.8);
+}
+
+main {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.content:hover {
+    transform: scale(1.02);
+}
+
+.content h1 {
+    margin: 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5em;
+    color: #c71585;
+}
+
+.content p {
+    font-size: 1.5em;
+    line-height: 1.8;
+    transition: color 0.3s ease-in-out;
+}
+
+.content p:hover {
+    color: #c71585;
+}
+
+footer {
+    padding: 20px;
+    color: #8d3a66;
+    font-size: 1em;
+}
+
+audio {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+audio:hover {
+    opacity: 1;
+}
+
+.quote-section {
+    margin-top: 40px;
+}
+
+#quote-button {
+    background-color: #c71585;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#quote-button:hover {
+    background-color: #8d3a66;
+}
+
+#quote-display {
+    font-size: 1.2em;
+    margin-top: 20px;
+    min-height: 50px;
+    font-style: italic;
+}
+
+.gallery-section {
+    margin-top: 40px;
+}
+
+.gallery-section h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #c71585;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.social-sharing {
+    margin-bottom: 20px;
+}
+
+.social-sharing p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.social-sharing a {
+    color: #c71585;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-sharing a:hover {
+    color: #8d3a66;
+}
+
+.butterfly-wrapper {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+}
+
+.butterfly-wrapper .leftwings,
+.butterfly-wrapper .rightwings {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+}
+
+.butterfly-wrapper .leftwings {
+    left: 0;
+}
+
+.butterfly-wrapper .rightwings {
+    right: 0;
+}
+
+.butterfly-wrapper .perspective {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    perspective: 150px;
+    perspective-origin: 50% 50%;
+}
+
+.butterfly-wrapper .upperwing,
+.butterfly-wrapper .lowerwing {
+    background: radial-gradient(ellipse at center, #ff85a2 0%, #ffb3b3 50%, #ff85a2 100%);
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.butterfly-wrapper .upperwing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.butterfly-wrapper .upperwing_left {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 30%;
+    transform-origin: 100% 50%;
+    animation-name: movewing_left;
+}
+
+.butterfly-wrapper .upperwing_right {
+    border-top-left-radius: 80%;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 0%;
+    transform-origin: 0% 50%;
+    animation-name: movewing_right;
+}
+
+.butterfly-wrapper .lowerwing {
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 80%;
+}
+
+.butterfly-wrapper .lowerwing_left {
+    right: 0;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 80%;
+    border-bottom-left-radius: 10%;
+    transform-origin: 100% 50%;
+    animation-name: movewing_left;
+}
+
+.butterfly-wrapper .lowerwing_right {
+    left: 0;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 80%;
+    transform-origin: 0% 50%;
+    animation-name: movewing_right;
+}
+
+@keyframes movewing_left {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(65deg); }
+}
+
+@keyframes movewing_right {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-65deg); }
+}
+
+@keyframes flutter {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(100vw, 100vh) rotate(360deg);
+    }
+}
+
+.butterfly1 { animation: flutter 20s cubic-bezier(0.42, 0, 0.58, 1) -5s infinite; }
+.butterfly2 { animation: flutter 25s cubic-bezier(0.42, 0, 0.58, 1) -10s infinite; }
+.butterfly3 { animation: flutter 30s cubic-bezier(0.42, 0, 0.58, 1) -15s infinite; }
+.butterfly4 { animation: flutter 35s cubic-bezier(0.42, 0, 0.58, 1) -20s infinite; }
+.butterfly5 { animation: flutter 40s cubic-bezier(0.42, 0, 0.58, 1) -25s infinite; }
+.butterfly6 { animation: flutter 45s cubic-bezier(0.42, 0, 0.58, 1) -30s infinite; }
+.butterfly7 { animation: flutter 50s cubic-bezier(0.42, 0, 0.58, 1) -35s infinite; }
+.butterfly8 { animation: flutter 55s cubic-bezier(0.42, 0, 0.58, 1) -40s infinite; }
+
+.heart {
+    position: absolute;
+    color: #c71585; /* Medium Violet Red */
+    font-size: 10px; /* Minimum size */
+}

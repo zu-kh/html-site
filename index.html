@@ -3,197 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عام جديد سعيد</title>
-    <style>
-		@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
-        body {
-            margin: 0;
-            overflow-y: auto;
-            background: linear-gradient(to top, #fff0f5, #fde6e8);
-            font-family: 'Noto Naskh Arabic', serif;
-            text-align: center;
-            color: #8d3a66; 
-            position: relative;
-        }
-		
-		.glow {
-            text-shadow: 0 0 8px rgba(224, 176, 255, 0.8), 0 0 15px rgba(224, 176, 255, 0.8);
-        }
-
-        main {
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .content {
-            padding: 50px 20px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 15px;
-            max-width: 600px;
-            margin: 40px auto;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .content:hover {
-            transform: scale(1.02);
-        }
-
-        .content h1 {
-            margin: 0;
-            font-family: 'Great Vibes', cursive;
-            font-size: 4.5em;
-            color: #c71585;
-        }
-
-        .content p {
-            font-size: 1.5em;
-            line-height: 1.8;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .content p:hover {
-            color: #c71585;
-        }
-
-        footer {
-            padding: 20px;
-            color: #8d3a66;
-            font-size: 1em;
-        }
-
-        .butterfly-wrapper {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-			opacity: 0.8;
-        }
-
-        .butterfly-wrapper .leftwings,
-        .butterfly-wrapper .rightwings {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            top: 0;
-        }
-
-        .butterfly-wrapper .leftwings {
-            left: 0;
-        }
-
-        .butterfly-wrapper .rightwings {
-            right: 0;
-        }
-
-        .butterfly-wrapper .perspective {
-            position: relative;
-            width: 100%;
-            height: 50%;
-            perspective: 150px;
-            perspective-origin: 50% 50%;
-        }
-
-        .butterfly-wrapper .upperwing,
-        .butterfly-wrapper .lowerwing {
-            background: radial-gradient(ellipse at center, #ff85a2 0%, #ffb3b3 50%, #ff85a2 100%);
-            animation-duration: 0.3s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
-
-        .butterfly-wrapper .upperwing {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .butterfly-wrapper .upperwing_left {
-            border-top-left-radius: 10%;
-            border-top-right-radius: 80%;
-            border-bottom-right-radius: 0%;
-            border-bottom-left-radius: 30%;
-            transform-origin: 100% 50%;
-            animation-name: movewing_left;
-        }
-
-        .butterfly-wrapper .upperwing_right {
-            border-top-left-radius: 80%;
-            border-top-right-radius: 10%;
-            border-bottom-right-radius: 30%;
-            border-bottom-left-radius: 0%;
-            transform-origin: 0% 50%;
-            animation-name: movewing_right;
-        }
-
-        .butterfly-wrapper .lowerwing {
-            position: absolute;
-            top: 0;
-            width: 80%;
-            height: 80%;
-        }
-
-        .butterfly-wrapper .lowerwing_left {
-            right: 0;
-            border-top-left-radius: 30%;
-            border-top-right-radius: 0%;
-            border-bottom-right-radius: 80%;
-            border-bottom-left-radius: 10%;
-            transform-origin: 100% 50%;
-            animation-name: movewing_left;
-        }
-
-        .butterfly-wrapper .lowerwing_right {
-            left: 0;
-            border-top-left-radius: 0%;
-            border-top-right-radius: 30%;
-            border-bottom-right-radius: 10%;
-            border-bottom-left-radius: 80%;
-            transform-origin: 0% 50%;
-            animation-name: movewing_right;
-        }
-
-        @keyframes movewing_left {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(65deg); }
-        }
-
-        @keyframes movewing_right {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(-65deg); }
-        }
-
-        @keyframes flutter {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            100% {
-                transform: translate(100vw, 100vh) rotate(360deg);
-            }
-        }
-
-        .butterfly1 { animation: flutter 20s cubic-bezier(0.42, 0, 0.58, 1) -5s infinite; }
-        .butterfly2 { animation: flutter 25s cubic-bezier(0.42, 0, 0.58, 1) -10s infinite; }
-        .butterfly3 { animation: flutter 30s cubic-bezier(0.42, 0, 0.58, 1) -15s infinite; }
-        .butterfly4 { animation: flutter 35s cubic-bezier(0.42, 0, 0.58, 1) -20s infinite; }
-        .butterfly5 { animation: flutter 40s cubic-bezier(0.42, 0, 0.58, 1) -25s infinite; }
-        .butterfly6 { animation: flutter 45s cubic-bezier(0.42, 0, 0.58, 1) -30s infinite; }
-        .butterfly7 { animation: flutter 50s cubic-bezier(0.42, 0, 0.58, 1) -35s infinite; }
-        .butterfly8 { animation: flutter 55s cubic-bezier(0.42, 0, 0.58, 1) -40s infinite; }
-	
-        .heart {
-            position: absolute;
-            color: #c71585; /* Medium Violet Red */
-            font-size: 10px; /* Minimum size */
-        }
-    
-    </style>
+    <title>أنتِ لحني الأبدي</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio controls autoplay loop muted>
+        <source src="path/to/your/romantic-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 	<div class="butterfly-wrapper butterfly1">
         <div class="leftwings">
             <div class="perspective">
@@ -341,114 +158,38 @@
     <header></header>
     <main>
     <div class="content">
-        <!-- The Arabic text means: "Happy new year, my love of my life. With the beginning of a new year, I want to tell you that you are the most beautiful gift in my life. Every day with you is a celebration, and every moment by your side is a blessing. I wish us a new year full of love, happiness, and unforgettable adventures. Happy new year my love." -->
-        <h1 class="glow">عام جديد سعيد، يا حب حياتي</h1>
+        <h1 class="glow">أنتِ لحني الأبدي</h1>
         <p class="glow">
-            مع بداية عام جديد، أريد أن أقول لكِ أنكِ أجمل هدية في حياتي. كل يوم معكِ هو عيد، وكل لحظة بجانبكِ هي نعمة. أتمنى لنا سنة جديدة مليئة بالحب والسعادة والمغامرات التي لا تُنسى. كل عام وأنتِ حبيبتي.
+            مع كل عام يمر، يتجدد حبي لكِ في قلبي. أنتِ لستِ مجرد هدية، بل أنتِ الحياة التي أعيشها. كل يوم معكِ هو فصل من فصول السعادة، وكل لحظة بجانبكِ هي نغمة في لحن حبنا الأبدي.
 			</p>
         <p class="glow">
-            أحب الليالي التي نقضيها معًا أمام التلفاز، نضحك بصوت عالٍ على مسلسل "باب الحارة" وأنتِ بجانبي. هذه اللحظات الصغيرة هي التي تملأ حياتي سعادة ودفئًا.
+            عيناكِ بحرٌ من الأسرار، فيه أغرق وأحيا. وابتسامتكِ فجرٌ يشرق في روحي، يمحو كل عتمة. أحبكِ... كلمةٌ صغيرة، لكنها تحمل كل ما في الكون من معنى.
         </p>
+    </div>
+    <div class="quote-section">
+        <button id="quote-button">همسة حب</button>
+        <p id="quote-display"></p>
+    </div>
+    <div class="gallery-section">
+        <h2>معرض الصور</h2>
+        <div class="gallery">
+            <img src="https://placehold.co/300x200/f8c8dc/8d3a66?text=Love" alt="صورة حب" loading="lazy">
+            <img src="https://placehold.co/300x200/fde6e8/8d3a66?text=Romance" alt="صورة رومانسية" loading="lazy">
+            <img src="https://placehold.co/300x200/fff0f5/8d3a66?text=Passion" alt="صورة شغف" loading="lazy">
+        </div>
     </div>
     </main>
 
     <footer>
+        <div class="social-sharing">
+            <p>شارك الحب:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE" target="_blank">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=Check out this romantic page!" target="_blank">Twitter</a>
+            <a href="whatsapp://send?text=Check out this romantic page! YOUR_URL_HERE" data-action="share/whatsapp/share">WhatsApp</a>
+        </div>
         <p>صنع بحب ♥</p>
     </footer>
     
-    
-<script>
-var colours = ['#d4a2b2', '#e2b3c2', '#c71585', '#e6c2bf', '#f2dad5']; // colors of the hearts
-var minisize = 5; // smallest size of hearts in pixels
-var maxisize = 30; // biggest size of hearts in pixels
-var hearts = 200; // maximum number of hearts on screen
-var over_or_under = "over"; // set to "over" for hearts to always be on top
-
-var swide = window.innerWidth;
-var shigh = window.innerHeight;
-var herz = [];
-var herzx = [];
-var herzy = [];
-
-window.onresize = function() {
-    swide = window.innerWidth;
-    shigh = window.innerHeight;
-}
-
-window.onload = function() {
-    for (var i = 0; i < hearts; i++) {
-        var heart = createHeart("auto", "auto");
-        heart.className = "heart"; // Add class for styling
-        heart.style.zIndex = (over_or_under == "over") ? "1001" : "0";
-        heart.style.color = colours[i % colours.length];
-        heart.style.pointerEvents = "none";
-        heart.appendChild(document.createTextNode(String.fromCharCode(9829)));
-        document.body.appendChild(heart);
-        herz[i] = heart;
-        herzy[i] = false;
-
-        // Position hearts randomly and make them appear
-        positionHeart(i);
-    }
-    setInterval(animateHearts, 50);
-}
-
-function positionHeart(i) {
-    herz[i].style.left = Math.random() * (swide - minisize) + "px";
-    herz[i].style.top = Math.random() * (shigh - minisize) + "px";
-    herz[i].style.fontSize = Math.random() * (maxisize - minisize) + minisize + "px";
-    herz[i].style.visibility = "visible";
-    herzy[i] = true;
-
-    // Set initial random movement direction
-    herzx[i] = Math.random() * 2 - 1; // Random horizontal movement (-1 to 1)
-    herzy[i] = Math.random() * 2 - 1; // Random vertical movement (-1 to 1)
-}
-
-function animateHearts() {
-    for (var i = 0; i < hearts; i++) {
-        if (herzy[i]) {
-            animateHeart(i);
-        }
-    }
-}
-
-function animateHeart(i) {
-    // This function animates a heart element
-    // Update position with smooth movement
-    var left = parseFloat(herz[i].style.left);
-    var top = parseFloat(herz[i].style.top);
-
-    left += herzx[i]; // Update x position
-    top += herzy[i];  // Update y position
-
-    // Change direction if the heart goes off screen
-    if (left < 0 || left > swide) {
-        herzx[i] *= -1; // Reverse direction
-    }
-    if (top < 0 || top > shigh) {
-        herzy[i] *= -1; // Reverse direction
-    }
-    if (Math.random() > 0.95) {
-        herzx[i] = Math.random() * 2 - 1;
-        herzy[i] = Math.random() * 2 - 1;
-    }
-
-    herz[i].style.left = left + "px"; // Update left position
-    herz[i].style.top = top + "px";   // Update top position
-}
-
-function createHeart(height, width) {
-    // This function creates a heart element
-    var span = document.createElement("span");
-    span.style.position = "absolute";
-    span.style.height = height;
-    span.style.width = width;
-    span.style.overflow = "hidden";
-    span.style.backgroundColor = "transparent";
-    return span;
-</script>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
