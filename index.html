@@ -1,52 +1,77 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عام جديد سعيد</title>
     <style>
-		@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
         body {
             margin: 0;
-            overflow-y: auto; /* Changed from hidden to auto for scrollability */
-            background: #fff0f5; /* Lavender Blush */
-            font-family: 'Great Vibes', cursive;
+            overflow-y: auto;
+            background: linear-gradient(to top, #fff0f5, #fde6e8);
+            font-family: 'Noto Naskh Arabic', serif;
             text-align: center;
-            color: #c71585; /* Medium Violet Red */
+            color: #8d3a66; 
             position: relative;
         }
 		
 		.glow {
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);
+            text-shadow: 0 0 8px rgba(224, 176, 255, 0.8), 0 0 15px rgba(224, 176, 255, 0.8);
         }
 
+        main {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
 
-
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
         .content {
             padding: 50px 20px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 15px;
             max-width: 600px;
-            margin: 20px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content:hover {
+            transform: scale(1.02);
         }
 
         .content h1 {
             margin: 0;
-            font-size: 4em;
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5em;
+            color: #c71585;
         }
 
         .content p {
-            font-size: 2em;
-            line-height: 1.6;
+            font-size: 1.5em;
+            line-height: 1.8;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .content p:hover {
+            color: #c71585;
+        }
+
+        footer {
+            padding: 20px;
+            color: #8d3a66;
+            font-size: 1em;
         }
 
         .butterfly-wrapper {
             position: absolute;
             width: 100px;
             height: 100px;
-			opacity: 1;
+			opacity: 0.8;
         }
 
         .butterfly-wrapper .leftwings,
@@ -55,7 +80,6 @@
             width: 50%;
             height: 100%;
             top: 0;
-			opacity: 1;
         }
 
         .butterfly-wrapper .leftwings {
@@ -76,7 +100,7 @@
 
         .butterfly-wrapper .upperwing,
         .butterfly-wrapper .lowerwing {
-            background: radial-gradient(ellipse at center, #ff0000 0%, #ffb3b3 50%, #ff0000 100%);
+            background: radial-gradient(ellipse at center, #ff85a2 0%, #ffb3b3 50%, #ff85a2 100%);
             animation-duration: 0.3s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -314,6 +338,8 @@
             </div>
         </div>
     </div>
+    <header></header>
+    <main>
     <div class="content">
         <!-- The Arabic text means: "Happy new year, my love of my life. With the beginning of a new year, I want to tell you that you are the most beautiful gift in my life. Every day with you is a celebration, and every moment by your side is a blessing. I wish us a new year full of love, happiness, and unforgettable adventures. Happy new year my love." -->
         <h1 class="glow">عام جديد سعيد، يا حب حياتي</h1>
@@ -324,10 +350,15 @@
             أحب الليالي التي نقضيها معًا أمام التلفاز، نضحك بصوت عالٍ على مسلسل "باب الحارة" وأنتِ بجانبي. هذه اللحظات الصغيرة هي التي تملأ حياتي سعادة ودفئًا.
         </p>
     </div>
+    </main>
+
+    <footer>
+        <p>صنع بحب ♥</p>
+    </footer>
     
     
 <script>
-var colours = ['#ff0000', '#ff4d4d', '#ff6666', '#ff7f7f', '#ff9999', '#ffb3b3', '#ffcccc']; // colors of the hearts
+var colours = ['#d4a2b2', '#e2b3c2', '#c71585', '#e6c2bf', '#f2dad5']; // colors of the hearts
 var minisize = 5; // smallest size of hearts in pixels
 var maxisize = 30; // biggest size of hearts in pixels
 var hearts = 200; // maximum number of hearts on screen
