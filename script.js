@@ -104,3 +104,8 @@ function createHeart(height, width) {
     span.style.backgroundColor = "transparent";
     return span;
 }
+
+const header = document.querySelector('header');
+header.addEventListener('click', () => {
+    alert('أنتِ أجمل شيء في حياتي');
+});
