@@ -2,7 +2,7 @@
 body {
     margin: 0;
     overflow-y: auto;
-    background: linear-gradient(to top, #fff0f5, #fde6e8);
+    background: linear-gradient(to top, #f8d7e8, #fde6e8);
     font-family: 'Noto Naskh Arabic', serif;
     text-align: center;
     color: #8d3a66; 
@@ -180,7 +180,7 @@ audio:hover {
 
 .butterfly-wrapper .upperwing,
 .butterfly-wrapper .lowerwing {
-    background: radial-gradient(ellipse at center, #ff85a2 0%, #ffb3b3 50%, #ff85a2 100%);
+    background: radial-gradient(ellipse at center, #ff85a2 0%, #c71585 50%, #ff85a2 100%);
     animation-duration: 0.3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
